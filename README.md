@@ -41,6 +41,14 @@ Examples:
   --client-id xxxx ---client-secret xxxx
 ```
 
+Example
+```bash
+$ GOOGLE_EMAIL=john@gmail.com GOOGLE_PASSWORD=p@s$w0rd google-oauth2-token \
+  --client-id xxxx \
+  --secret-client xxxx \
+  --scope https://www.googleapis.com/auth/youtube 
+```
+
 ## Google API credentials setup
 
 Be sure you have a project and a Web Application credentials with a Client ID and Client Secret 
