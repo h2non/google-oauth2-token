@@ -1,4 +1,4 @@
-# google-oauth2-token [![Build Status](https://api.travis-ci.org/h2non/google-oauth2-.svg?branch=master)][travis]  [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
+# google-oauth2-token [![Build Status](https://api.travis-ci.org/h2non/google-oauth2-token.svg?branch=master)][travis]  [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
 
 No headaches. Automation wins. Get a fresh OAuth2 token ready to be used for [Google APIs](https://developers.google.com/apis-explorer/) calls in just one command
 
