@@ -21,7 +21,7 @@ npm install -g google-oauth2-token
 $ google-oauth2-token --help
 
 Get Google OAuth2 token.
-Usage: node bin/google-oauth2-token [options]
+Usage: google-oauth2-token [options]
 
 Options:
   --help, -h           Show help                                                
