@@ -1,0 +1,101 @@
+#!/usr/bin/env node
+
+var Nightmare = require('nightmare')
+var NightmareOAuth2 = require('nightmare-google-oauth2')
+var version = require('../package.json').version
+
+var yargs = require('yargs')
+var argv = yargs
+  .usage('Get Google OAuth2 token.\nUsage: $0 [options]')
+  .example('$0 -e user@gmail.com -p myP@ssw0rd --scope https://www.googleapis.com/auth/youtube.upload --client-id xxxx ---client-secret xxxx', '')
+  .help('help').alias('help', 'h')
+  .version(version).alias('v', 'version')
+  .strict()
+  .showHelpOnFail(false, 'Specify --help for available options')
+  .options({
+    email: {
+      alias: 'e',
+      description: 'Google Account user email. Available as env variable: GOOGLE_EMAIL'
+    },
+    password: {
+      alias: 'p',
+      description: 'Google Account user password. Available as env variable: GOOGLE_PASSWORD'
+    },
+    'client-id': {
+      alias: 'c',
+      description: 'Google API Client ID',
+      required: true
+    },
+    'client-secret': {
+      alias: 'x',
+      description: 'Google API Client Secret. Available as env variable: GOOGLE_CLIENTSECRET'
+    },
+    scope: {
+      alias: 's',
+      description: 'Google API permissions scope',
+      required: true
+    },
+    json: {
+      alias: 'j',
+      description: 'Print tokens to stdout as JSON'
+    }
+  })
+  .argv
+
+try {
+  launch()
+} catch (err) {
+  printError(err)
+}
+
+function launch() {
+  new Nightmare()
+    .use(NightmareOAuth2.getToken(getParams(argv), printToken))
+    .run(function (err) {
+      if (err) printError(err)
+    })
+}
+
+function printToken(err, tokens) {
+  if (err) {
+    printError(err)
+  } else if (argv.json) {
+    echo(JSON.stringify(tokens, null, 2))
+  } else {
+    echo('Token:', tokens.access_token)
+    echo('Refresh token:', tokens.refresh_token)
+  }
+}
+
+function getParams(args) {
+  var buf = {}
+
+  ;['email', 'password', 'client-id', 'client-secret', 'scope'].forEach(function (name) {
+    if (args[name]) {
+      buf[camelize(name)] = args[name]
+    }
+  })
+
+  ;['email', 'password', 'clientSecret'].forEach(function (key) {
+    if (!buf[key]) {
+      buf[key] = process.env['GOOGLE_' + key.toUpperCase()]
+    }
+  })
+
+  return buf
+}
+
+function camelize(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (letter, index) {
+    return index === 0 ? letter.toLowerCase() : letter.toUpperCase()
+  }).replace('-', '')
+}
+
+function printError(msg) {
+  console.error(msg.message || err)
+  process.exit(1)
+}
+
+function echo() {
+  console.log.apply(console, arguments)
+}

@@ -1,0 +1,35 @@
+{
+  "name": "google-oauth2-token",
+  "description": "Get a fresh OAuth2 token for Google APIs",
+  "version": "0.1.0",
+  "repository": "h2non/google-oauth2-token",
+  "license": "MIT",
+  "author": "Tomas Aparicio",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "bin": {
+    "google-oauth2-token": "./bin/google-oauth2-token"
+  },
+  "scripts": {
+    "test": "./node_modules/_bin/mocha --timeout 30000 --reporter spec --ui tdd"
+  },
+  "dependencies": {
+    "nightmare-google-oauth2": "^0.1.0",
+    "yargs": "^3.4.5"
+  },
+  "peerDependencies": {
+    "nightmare": "^1.7.0"
+  },
+  "keywords": [
+    "nightmare",
+    "phantomjs",
+    "googleapis",
+    "google",
+    "oauth",
+    "oauth2",
+    "token",
+    "authentication",
+    "auth"
+  ]
+}
