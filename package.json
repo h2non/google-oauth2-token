@@ -1,6 +1,6 @@
 {
   "name": "google-oauth2-token",
-  "description": "Get a fresh OAuth2 token for Google APIs",
+  "description": "Get a fresh OAuth2 token for Google APIs in just one command. Automation wins",
   "version": "0.1.0",
   "repository": "h2non/google-oauth2-token",
   "license": "MIT",
