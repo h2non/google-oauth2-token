@@ -1,4 +1,4 @@
-# google-oauth2-token [![Dependency Status](https://gemnasium.com/h2non/google-oauth2-token.png)][gemnasium] [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
+# google-oauth2-token [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
 
 No headaches. Automation wins. Get a fresh OAuth2 token ready to be used for Google APIs calls
 
