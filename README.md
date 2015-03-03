@@ -1,6 +1,6 @@
 # google-oauth2-token [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
 
-No headaches. Automation wins. Get a fresh OAuth2 token ready to be used for Google APIs calls
+No headaches. Automation wins. Get a fresh OAuth2 token ready to be used for [Google APIs](https://developers.google.com/apis-explorer/) calls
 
 This package was designed to simplify server-to-server tasks automation and avoid headaches when dealing with OAuth, 
 since it the [unique method](https://developers.google.com/youtube/v3/guides/authentication#OAuth2_Flows) to perform most of the write operations via Google APIs
