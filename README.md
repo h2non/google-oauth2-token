@@ -41,7 +41,8 @@ Examples:
   --client-id xxxx ---client-secret xxxx
 ```
 
-Example
+#### Example
+
 ```bash
 $ GOOGLE_EMAIL=john@gmail.com GOOGLE_PASSWORD=p@s$w0rd google-oauth2-token \
   --client-id xxxx \
