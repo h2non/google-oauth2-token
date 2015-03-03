@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-var Nightmare = require('nightmare')
-var NightmareOAuth2 = require('nightmare-google-oauth2')
+var getToken = require('../')
 var version = require('../package.json').version
 
 var yargs = require('yargs')
@@ -43,17 +42,9 @@ var argv = yargs
   .argv
 
 try {
-  launch()
+  getToken(getParams(argv), printToken)
 } catch (err) {
   printError(err)
-}
-
-function launch() {
-  new Nightmare()
-    .use(NightmareOAuth2.getToken(getParams(argv), printToken))
-    .run(function (err) {
-      if (err) printError(err)
-    })
 }
 
 function printToken(err, tokens) {

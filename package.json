@@ -1,6 +1,6 @@
 {
   "name": "google-oauth2-token",
-  "description": "Get a fresh OAuth2 token for Google APIs in just one command. Automation wins",
+  "description": "Get a fresh OAuth2 token for Google APIs in just one command. Automation rules",
   "version": "0.1.0",
   "repository": "h2non/google-oauth2-token",
   "license": "MIT",
@@ -18,8 +18,9 @@
     "nightmare-google-oauth2": "^0.1.0",
     "yargs": "^3.4.5"
   },
-  "peerDependencies": {
-    "nightmare": "^1.7.0"
+  "devDependencies": {
+    "chai": "^2.1.0",
+    "mocha": "^2.1.0"
   },
   "keywords": [
     "nightmare",
