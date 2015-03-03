@@ -1,8 +1,4 @@
-# google-oauth2-token [![Dependency Status](https://gemnasium.com/h2non/google-oauth2-token.png)][gemnasium] [![NPM version](https://badge.fury.io/js/google-oauth2-token.png)][npm]
-
-<!--
-[![Build Status](https://api.travis-ci.org/h2non/google-oauth2-token.svg?branch=master)][travis]
--->
+# google-oauth2-token [![Dependency Status](https://gemnasium.com/h2non/google-oauth2-token.png)][gemnasium] [![NPM version](https://img.shields.io/npm/v/google-oauth2-token.svg)][npm]
 
 No headaches. Automation wins. Get a fresh OAuth2 token ready to be used for Google APIs calls
 
@@ -65,5 +61,4 @@ Then you should see something like:
 
 [console]: https://code.google.com/apis/console
 [travis]: https://travis-ci.org/h2non/google-oauth2-token
-[gemnasium]: https://gemnasium.com/h2non/google-oauth2-token
 [npm]: http://npmjs.org/package/google-oauth2-token
