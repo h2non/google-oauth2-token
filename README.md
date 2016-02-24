@@ -7,7 +7,7 @@ since it the [unique method](https://developers.google.com/youtube/v3/guides/aut
 
 It provides a simple [programmatic](#programmatic-api) and [command-line](#command-line-interface) interface which abstracts you about performing any kind of manual steps related to the authorization and handshake process to obtain a valid OAuth2 token
 
-This uses [PhantomJS](http://phantomjs.org) + [Nightmare](https//gitbub.com/segmentio/nightmare) via [nightmare-google-oauth2](https://github.com/h2non/nightmare-google-oauth2) plugin
+This uses [Electron](http://electron.atom.io/) + [Nightmare](https//gitbub.com/segmentio/nightmare) via [nightmare-google-oauth2](https://github.com/h2non/nightmare-google-oauth2) plugin
 
 ## Google API credentials setup
 
