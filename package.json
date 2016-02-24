@@ -1,12 +1,12 @@
 {
   "name": "google-oauth2-token",
   "description": "Get a fresh OAuth2 token for Google APIs in just one command. Automation rules",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "repository": "h2non/google-oauth2-token",
   "license": "MIT",
   "author": "Tomas Aparicio",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
   "bin": {
     "google-oauth2-token": "./bin/google-oauth2-token"
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "nightmare-google-oauth2": "^0.1.0",
+    "nightmare": "git+https://github.com/h2non/nightmare.git#master",
     "yargs": "^3.4.5"
   },
   "devDependencies": {
