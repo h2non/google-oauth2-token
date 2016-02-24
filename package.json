@@ -15,7 +15,7 @@
     "test": "./node_modules/_bin/mocha --timeout 30000 --reporter spec --ui tdd"
   },
   "dependencies": {
-    "nightmare-google-oauth2": "^0.1.0",
+    "nightmare-google-oauth2": "^0.2.0",
     "nightmare": "git+https://github.com/h2non/nightmare.git#master",
     "yargs": "^3.4.5"
   },
